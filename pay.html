@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-Tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <style>
+        html {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        header {
+            box-shadow: 0 3px 5px #cccccc;
+            padding: 9px 0 9px 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .navbar {
+            list-style-type: none;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li.navitem {
+            display: inline;
+            border-right: 1px solid black;
+        }
+        
+        li.navitem a {
+            padding: 0 9px;
+            color: #555555;
+        }
+        
+        li.navitem a:link {
+            text-decoration: none;
+        }
+        
+        li.navitem a:hover {
+            text-decoration: underline;
+            color: #0654BA;
+        }
+        
+        .adi a {
+            padding: 0 px;
+            color: #555555;
+        }
+        
+        .adi a:link {
+            text-decoration: none;
+        }
+        
+        .adi a:hover {
+            text-decoration: underline;
+            color: #0654BA;
+        }
+        
+        #signin-style a:link {
+            padding: 0;
+        }
+        
+        #signin-style a:link:last-child {
+            padding-right: 16px;
+        }
+        
+        .float-right {
+            float: right;
+        }
+        
+        .noborder {
+            border-right: none !important;
+        }
+        
+        #car {
+            margin-top: -5px;
+            padding: 0 15px 0 25px;
+        }
+        
+        #be {
+            margin-top: -5px;
+            padding: 0 15px 0 25px;
+        }
+        
+        #brand {
+            margin-top: 15px;
+        }
+        
+        #search {
+            width: 100%;
+            height: 65px;
+            overflow: hidden;
+        }
+        
+        .clearfix {
+            clear: both;
+        }
+        
+        #brand {
+            float: left;
+        }
+        
+        #button {
+            float: left;
+            width: 70px;
+            font-size: 14px;
+            border: none;
+            margin-right: 15px;
+            background-color: white;
+        }
+        
+        #arrow {
+            position: relative;
+            bottom: 35px;
+            left: 40px;
+        }
+        
+        #search-form {
+            float: left;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        
+        #search-field {
+            border-radius: 3px 0 0 3px;
+            width: 630px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        
+        .text-field {
+            font-size: 16px;
+            color: #767676;
+            padding: 10px 0 9px 8px;
+            border: 1px solid #ddd;
+        }
+        
+        #category {
+            border-radius: 0 3px 3px 0;
+            padding: 11px 10px 11px 10px;
+            height: 40px;
+            width: 180px;
+            background-color: #fff;
+            box-sizing: border-box;
+            margin-left: -4px;
+        }
+        
+        .option {
+            border: none;
+            font-size: 12px;
+            width: 100%;
+            background-color: transparent;
+        }
+        
+        .btn-primary {
+            font-size: 16px;
+            height: 40px;
+            font-weight: 500;
+            border-radius: 3px;
+            border: 0;
+            color: #fff;
+            padding: 8px 19px 9px 19px;
+            background: linear-gradient(to bottom, #0079bc, #00509d);
+        }
+        
+        .btn-primary:hover {
+            background: #00509d;
+        }
+        
+        #advanced {
+            color: #555555;
+            text-decoration: none;
+            font-size: 11px;
+            margin-left: 10px;
+        }
+        
+        #advanced:hover {
+            color: #0654ba;
+        }
+        
+        nav {
+            width: 100%;
+            height: 35px;
+            padding-top: 12px;
+        }
+        
+        .tb-border {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #navigation-bar {
+            width: 100%;
+            padding: 10px 0 11px 0;
+            height: 35px;
+            box-sizing: border-box;
+        }
+        
+        .li-space {
+            float: left;
+            padding: 0 2%;
+        }
+        
+        #column1 {
+            float: left;
+        }
+        
+        .box-sub {
+            float: left;
+            width: 190px;
+            margin: 0 24px 0 0;
+        }
+        
+        .sale {
+            width: 169px;
+            border: 2px solid black;
+        }
+        
+        .details {
+            width: 180px;
+            display: inline-block;
+            font-size: 14px;
+            padding: 8px 0 0 8px;
+            color: black;
+            text-decoration: none;
+        }
+        
+        .details:hover {
+            text-decoration: underline;
+            color: #0654BA;
+        }
+        
+        .price {
+            padding: 8px 0 0 8px;
+            margin: 0;
+        }
+        
+        .color1 {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            border: black 1px solid;
+        }
+        
+        .btn2 {
+            width: 100px;
+            height: 40px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <ul class="navbar">
+                <li id="signin-style" class="navitem">Hi! <a href="#">Sign in</a> or <a href="#">register</a></li>
+                <li class="navitem"><a href="#">Daily Deals</a></li>
+                <li class="navitem"><a href="#">Sell</a></li>
+                <li class="navitem noborder"><a href="#">Help & Contact</a></li>
+                <li id="car" class="navitem float-right noborder"><img src="image/1car.png" alt="car" title="您的購物車" width="30px"> </li>
+                <li id="be" class="navitem float-right noborder "><img src="image/2bell.png" alt="be" width="30px">
+                </li>
+                <li class="navitem float-right noborder"><a href="#">My eBay</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="search" class="clearfix">
+        <div class="container">
+            <a href="eBay.html"> <img id="brand" src="image/b.png" alt="eBay" height="40px"></a>
+            <button id="button" type="button">
+                <p>Shop by category</p>
+                <img id="arrow" src="image/arrow.png" alt="arrow" width="20px">
+            </button>
+            <form id="search-form">
+                <table>
+                    <tr>
+                        <td><input id="search-field" class="text-field" type="text" name="search-content" placeholder="Search for anything"></td>
+                        <td>
+                            <div id="category" class="text-field">
+                                <select class="option" name="cate">
+                                    <option selected="selected" value="0">All Categories</option>
+                                    <option value="1">Antiques</option>
+                                    <option value="2">Art</option>
+                                    <option value="3">Books</option>
+                                </select> </div>
+                        </td>
+                        <td> <input class="btn-primary" value="Search" type="submit"> </td>
+                        <td> <a href="#" id="advanced" title="高級搜索">Ａdvanced</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+
+    <nav class="clearfix setcolor">
+
+        <div class="container">
+            <ul id="navigation-bar" class="navbar tb-border">
+                <li class="navitem li-space noborder"> <a href="#">Following</a> </li>
+                <li class="navitem li-space noborder active"> <a href="#">Today</a> </li>
+                <div class="divider"></div>
+                <li class="navitem li-space noborder"> <a href="#">Fashion</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Electronics</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Collectibles & Art</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Home & Garden</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Sporting Goods</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Motors</a> </li>
+                <li class="navitem li-space noborder"> <a href="#">Daily Deals</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 30px; height: 500px;">
+        <div style="float:left;margin-left: 70px;margin-top: 20px;">
+            <div id="pic" style="width:150px ;height: 150px; padding: 20px;"><img style="border: black 1px solid;width: 300px;height: 300px;" src="image/page1-2.jpg"></div>
+            <div style="margin-top:160px ;">
+                <div onclick="pic1()" class="color1" style="margin-left: 70px; background-color: white;"></div>
+                <div onclick="pic2()" class="color1" style="margin-left: 150px;margin-top:-32px ;background-color:black;"></div>
+                <div onclick="pic3()" class="color1" style="margin-left: 230px;margin-top:-32px ;background-color: rgb(129, 167, 129);"></div>
+                <div onclick="pic4()" class="color1" style="margin-left:70px ;margin-top: 35px;background-color: rgb(247, 247, 109);"></div>
+                <div onclick="pic5()" class="color1" style="margin-left: 150px;margin-top: -32px;background-color: rgb(250, 123, 250);"></div>
+                <div onclick="pic6()" class="color1" style="margin-left: 230px;margin-top:-32px ;background-color: rgb(235, 43, 43);"></div>
+            </div>
+        </div>
+        <div style="float: right;width:700px ;height: 600px;">
+            <pre style="font-size: 3.5rem;">Iphone11 128G</pre>
+            <h2 id="item">Iphone11 128G</h2>
+            <div style="display: flex;">
+                <h3 id="item2" style="color: #c7c7c7;"> </h3>
+                <button onclick="delet()" id="delet1" style="display: none; margin: 21px;background-color: red;border: none;color: white;">⏤</button>
+            </div>
+            <div style="display: flex;">
+                <h3 id="item3" style="color: #c7c7c7;"></h3>
+                <button onclick="delet1()" id="delet2" style="display: none; margin: 21px;background-color: red;border: none;color: white;">⏤</button>
+            </div>
+            <h2>NTD:26,900</h2>
+            <input type="number" id="qty" value="1">
+            <hr>
+            <button onclick="conf()" class="btn2" style="background-color:#c7c7c7 ;">Confirm</button>
+            <button onclick="count()" class="btn2" style="background-color: rgb(73, 250, 73);text-decoration: none;color: black;">Buy</button>
+            <h3 id="final1" style="display: none;">Total: <span id="final">0</span></h3>
+            <a href="check.html" style="text-decoration: none;"><button id="final2" style="background-color:rgb(131, 99, 247);display: none;height: 40px;width: 205px;color: white;border: none;font-size: x-large;">Pay</button></a>
+        </div>
+    </div>
+
+
+    <footer>
+        <img src="image/p1footer.png" alt="" style="width: 100%;" height="150px">
+    </footer>
+    <script>
+        function pic1() {
+            document.getElementById('item').innerText = `Iphone11 128G-white`;
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic1.png">';
+        }
+
+        function pic2() {
+            document.getElementById('item').innerText = 'Iphone11 128G-black';
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic2.png">';
+        }
+
+        function pic3() {
+            document.getElementById('item').innerText = 'Iphone11 128G-green';
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic3.png">';
+        }
+
+        function pic4() {
+            document.getElementById('item').innerText = 'Iphone11 128G-yellow';
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic4.png">';
+        }
+
+        function pic5() {
+            document.getElementById('item').innerText = 'Iphone11 128G-purple';
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic5.png">';
+        }
+
+        function pic6() {
+            document.getElementById('item').innerText = 'Iphone11 128G-red';
+            document.getElementById('pic').innerHTML = '<img  style="border: black 1px solid;width: 300px;height: 300px;"src="image/pic6.png">';
+        }
+
+        var tot = 0;
+
+        function conf() {
+            var a = document.getElementById('qty').value;
+            var z = document.getElementById('item2').innerText;
+            var abd = document.getElementById('item3').innerText;
+            var temp = document.getElementById('item').innerText;
+            if (z != '') {
+                document.getElementById('item3').innerText = `${temp} x ${a}`;
+                document.getElementById('delet2').style.display = 'block';
+            } else if (z == '') {
+                document.getElementById('item2').innerText = `${temp} x ${a}`;
+                document.getElementById('delet1').style.display = 'block';
+                document.getElementById('delet2').style.display = 'none';
+                document.getElementById('item3').innerText = '';
+            }
+
+        }
+
+        function delet() {
+            document.getElementById('item2').innerText = '';
+            document.getElementById('delet1').style.display = 'none';
+
+        }
+
+        function delet1() {
+            document.getElementById('item3').innerText = '';
+            document.getElementById('delet2').style.display = 'none';
+        }
+
+        function count() {
+            var z1 = document.getElementById('item2').innerText;
+            var abd1 = document.getElementById('item3').innerText;
+            document.getElementById('final1').style.display = 'block';
+            document.getElementById('final2').style.display = 'block';
+            z1 = z1.slice(-1);
+            abd1 = abd1.slice(-1);
+            if (abd1 == '' && z1 != '') {
+                tot = parseInt(z1);
+            } else if (abd1 != '' && z1 != '') {
+                tot = parseInt(z1) + parseInt(abd1);
+            } else if (abd1 != '' && z1 == '') {
+                tot = parseInt(abd1);
+            } else if (abd1 == '' && z1 == '') {
+                document.getElementById('final1').style.display = 'none';
+                document.getElementById('final2').style.display = 'none';
+            }
+            b = tot * 26900;
+            document.getElementById('final').innerText = b;
+        }
+    </script>
+</body>
+
+
+</html>
